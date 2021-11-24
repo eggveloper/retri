@@ -10,7 +10,7 @@ from .shaders import (
     FRAMEBUFFER_FRAGMENT_SHADER,
     FRAMEBUFFER_ATTRIBUTE_INFO,
 )
-from .bank import Bank
+from .image import Image
 
 TYPE_PIX = 0
 TYPE_LINE = 1
@@ -44,7 +44,7 @@ class Renderer:
     def __init__(self, width, height, bank_size, bank_count, draw_count):
         self.width = width
         self.height = height
-        self.bank_list = [Bank(*bank_size) for _ in range(bank_count)]
+        self.bank_list = [Image(*bank_size) for _ in range(bank_count)]
         self.max_bank_count = bank_count
         self.max_draw_count = draw_count
         self.cur_draw_count = 0
