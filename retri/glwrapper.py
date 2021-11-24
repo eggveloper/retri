@@ -97,7 +97,7 @@ class GLTexture:
         gl.glBindTexture(gl.GL_TEXTURE_2D, 0)
 
     def _begin(self, i):
-        gl.glActiveTexture(gl.GL_TEXURE0 + i)
+        gl.glActiveTexture(gl.GL_TEXTURE0 + i)
         gl.glBindTexture(gl.GL_TEXTURE_2D, self.tex)
 
         if self.need_to_refresh:
